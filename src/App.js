@@ -14,7 +14,11 @@ const articleStyle = {
   borderRadius: 20
 }
 
-
+const imgStyle = {
+  width: '100%',
+  height: '45%', 
+  borderRadius: 5
+}
 
 class App extends Component {
   constructor(props){
@@ -25,10 +29,9 @@ class App extends Component {
       isLoaded: false,
       viceData: {},
       articleTitles: {},
+      articleImgs: {},
     }
   }
-
-
 
   componentDidMount() {
     fetch('https://newsapi.org/v2/top-headlines?' +
@@ -36,21 +39,28 @@ class App extends Component {
           'apiKey=277f6193f589485587995aa39ef585ed')
          .then(d => d.json()) 
          .then(d => {
+            const articleTitleList = []
+            const articleImgList = []
+           for(var i = 0; i < d.articles.length; i ++) {
+             articleTitleList.push(d.articles[i].title)
+             articleImgList.push(d.articles[i].urlToImage)
+           }
            this.setState({
-             viceData: d
+             viceData: d,
+             articleTitles: articleTitleList,
+             articleImgs: articleImgList
            });
          });
         };
-
-
+  
+  
   render() {
    if (!this.state.viceData) return "Loading..."
     const viceData = this.state.viceData;
     JSON.stringify(viceData)
     return (
       <div className="App">
-        <Article />
-        {console.log(viceData.articles)}
+        <Article pic={this.state.articleImgs} />
       </div>
     )
   }
@@ -62,13 +72,12 @@ class App extends Component {
 
 
 
-
-
-
 class Article extends Component {
+
   render() {
     return (
       <div className="articleBox" style={articleStyle}>
+        <img src={this.props.pic[0]} alt="this is a pic" style={imgStyle} />
       </div>
     )
   }
