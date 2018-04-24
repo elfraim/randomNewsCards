@@ -1,6 +1,6 @@
-App created with ReactJs.
+App created with ReactJs
 
-The app displayes the top news articles in The Netherlands onto floating cards.
+The app displayes the top news articles onto floating cards.
 
 Basically a super easy introduction to the fudndemtals of:
 
