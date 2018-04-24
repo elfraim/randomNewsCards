@@ -7,6 +7,12 @@ import LikeCounter from './components/LikeCounter.js';
 import './App.css';
 
 
+const titleStyle = {
+  display: 'flex',
+  borderRadius: 8,
+  marginLeft: '32%',
+  marginTop: '1%',
+}
 
 const articleStyle = {
   display: 'flex',
@@ -44,14 +50,14 @@ class MainBlock extends Component {
 
   handleClick() {
     var likeStatus = this.state.likeStatus
-    var clickCounter = 0
+    var clickCounter = null
     if (likeStatus === false) { 
       clickCounter++
       this.setState({
         likeCounter: clickCounter,
         likeStatus: true
     })} else if (likeStatus === true) {
-      clickCounter = clickCounter -1
+      clickCounter-1
       this.setState({
         likeCounter: clickCounter,
         likeStatus: false
@@ -110,6 +116,12 @@ export default class App extends Component {
   render() {
    return (
      <div>
+     <h1 style={titleStyle}>Generates random news articles</h1>
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
       <MainBlock />
       <MainBlock />
       <MainBlock />
