@@ -1,26 +1,69 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#articleTitle {
+  font-family: Teko;
+  text-transform: uppercase;
+  font-stretch: condensed;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  line-height: 100%
+}
+
+#para {
+  color: #575757;
+  padding: 1px 10px;
+  font-family: Roboto Slab;
 }
 
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+
+
+
+/* Css Heart Button */
+input[type=checkbox] {
+	clear: both;
+	display: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+input[type="checkbox"] {
+  display: none;
 }
 
-.App-intro {
-  font-size: large;
+input[type="checkbox"]:checked + label svg {
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	fill: rgb(220, 72, 127);
+	transform: scale(1.3);
+	-webkit-transform: scale(1.3);
 }
 
-.articleBox {
-  background-color: red;
+input[type="checkbox"]:checked + label:after {
+	-webkit-animation: like-a 0.3s 0.2s forwards;
+	-moz-animation: like-a 0.3s 0.2s forwards;
+	animation: like-a 0.3s 0.2s forwards;
+}
+
+input[type="checkbox"]:checked + label:before {
+	-webkit-animation: like-a 0.5s 0s forwards;
+	-moz-animation: like-a 0.5s 0s forwards;
+	animation: like-a 0.5s 0s forwards;
+}
+
+label svg {
+  padding: 10px 10px;
+	display: inline-flex;
+	vertical-align: middle;
+	width: 35px;
+	fill: rgb(167, 167, 167);
+}
+
+#likeCounter {
+  color: red;
+  padding: 5px 5px;
 }
