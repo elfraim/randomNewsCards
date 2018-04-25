@@ -29,14 +29,14 @@ export default class MainBlock extends Component {
   
     handleClick() {
       var likeStatus = this.state.likeStatus
-      var clickCounter = null
+      var clickCounter = this.state.likeCounter
       if (likeStatus === false) { 
-        clickCounter++
+        clickCounter = clickCounter +1
         this.setState({
           likeCounter: clickCounter,
           likeStatus: true
       })} else if (likeStatus === true) {
-        clickCounter-1
+        clickCounter -= 1
         this.setState({
           likeCounter: clickCounter,
           likeStatus: false

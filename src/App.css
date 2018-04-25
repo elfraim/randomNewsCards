@@ -27,15 +27,6 @@
   background-size: 100% 100%;
 }
 
-#bodyTitle {
-  color: red;
-  background-color: #666666;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
-}
 
 #articleTitle {
   font-family: Playfair display;
@@ -96,6 +87,7 @@ label svg {
   fill: rgb(167, 167, 167);
   align-self: flex-start;
   order: 0;
+  cursor: pointer;
 }
 
 #likeCounter {
@@ -105,5 +97,5 @@ label svg {
   padding: 5px 5px;
   font-family: 'Roboto';
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
