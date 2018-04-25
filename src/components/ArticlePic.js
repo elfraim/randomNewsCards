@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 
 const imgStyle = {
-    width: '500px',
-    height: '210px', 
     borderRadius: 2,
     alignSelf: 'flex-start',
     backgroundColor: '#adadad',
+    backgroundSize: '100% 205px',
   }
   
 export default class ArticlePic extends Component {

@@ -1,14 +1,15 @@
 .App {
   margin: 0;
   padding: 0;
+  max-height: 405px;
 }
 
 
 #img {
   width: 500px;
-height: 210px;
-background-image:url(https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg);
-
+  height: 210px;
+  background-image:url(https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg);
+  background-size: 100% 100%;
 }
 
 
@@ -16,7 +17,7 @@ background-image:url(https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg);
   font-family: Playfair display;
   padding-right: 3px;
   font-stretch: condensed;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 5px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -30,7 +31,6 @@ background-image:url(https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg);
   margin-bottom: 0;
   font-family: Roboto Slab;
 }
-
 
 
 
