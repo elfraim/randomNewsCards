@@ -5,6 +5,21 @@
 }
 
 
+.articleStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  box-shadow: 5px 19px 38px rgba(0,0,0,.2),0 15px 12px rgba(0,0,0,.12);
+  background-color: whitesmoke;
+  width: 500px;
+  height: 405px;
+  border-radius: 8px;
+  margin-left: 32%;
+  margin-top: 1%;
+  max-height: 405px;
+}
+
 #img {
   width: 500px;
   height: 210px;
