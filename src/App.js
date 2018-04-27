@@ -22,6 +22,12 @@ export default class App extends Component {
       <MainBlock />
       <MainBlock />
       <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
+      <MainBlock />
      </div>
     );
   }
